@@ -9,7 +9,7 @@ function ListaTareas() {
 
   const agregarTarea = () => {
     if (nuevoTexto.trim() !== '') {
-      setTareas([...tareas, { id: tareas.length() + 1, texto: nuevoTexto }]);
+      setTareas([...tareas, { id: tareas.length + 1, texto: nuevoTexto }]);
       setNuevoTexto('');
     }
   };
@@ -25,7 +25,7 @@ function ListaTareas() {
       <input
         type="text"
         value={nuevoTexto}
-        onChange={e => setNuevoTexto(e.target.value())}
+        onChange={e => setNuevoTexto(e.target.value)}
       />
       <button onClick={agregarTarea}>Agregar Tarea</button>
     </div>
